@@ -14,9 +14,13 @@ interface Props {
   person: Person
 }
 
+
+
 const TextField: React.FC<Props> = ({ person, fn, i, ok, text}) => {
   // useState argument can have type number or null
-  const [count, setCount] = useState<number | null>(5);
+  const [count, setCount] = useState<{ text: string }>({text: "hello world"});
+
+  setCount({text: "Goodbye World"})
 
   return (
     <div>
