@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 interface Person {
   firstName: string;
@@ -15,6 +15,9 @@ interface Props {
 }
 
 const TextField: React.FC<Props> = ({ person, fn, i, ok, text}) => {
+  // useState argument can have type number or null
+  const [count, setCount] = useState<number | null>(5);
+
   return (
     <div>
       <input />
